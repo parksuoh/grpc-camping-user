@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.example.grpc;
+
+
+message ExistUserRequest {
+  string name = 1;
+}
+
+message ExistUserResponse {
+  bool ok = 1;
+}
+
+
+service ExistUserService {
+  rpc ExistUser(ExistUserRequest) returns (ExistUserResponse);
+}
